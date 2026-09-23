@@ -1,6 +1,6 @@
 # My To-Do List
 
-A small, single-page to-do list built with **React** (using Vite). You can add
+A small, single-page to-do list built with React (using Vite). You can add
 tasks, mark them complete, delete them, and filter the list. Your tasks are
 saved in the browser, so they're still there when you refresh the page.
 
