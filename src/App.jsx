@@ -6,21 +6,13 @@ import './App.css'
 
 const STORAGE_KEY = 'my-todo-list'
 
-// A few starter tasks, only used the very first time the app runs
-// (before anything has been saved to the browser).
-const DEFAULT_TODOS = [
-  { id: 1, text: 'Read the Full Stack @ Brown application', done: true },
-  { id: 2, text: 'Build a to-do list in React', done: false },
-  { id: 3, text: 'Write the README', done: false },
-]
-
 function App() {
   // ---- State ----
   // The list of todos. We initialize it from localStorage so tasks
-  // survive a page refresh; if nothing is saved yet, use the defaults.
+  // survive a page refresh; if nothing is saved yet, we start empty.
   const [todos, setTodos] = useState(() => {
     const saved = localStorage.getItem(STORAGE_KEY)
-    return saved ? JSON.parse(saved) : DEFAULT_TODOS
+    return saved ? JSON.parse(saved) : []
   })
 
   // Which tasks to show: 'active' | 'done'
