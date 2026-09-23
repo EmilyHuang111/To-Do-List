@@ -22,7 +22,7 @@ This app lets you manage a personal task list:
 You'll need [Node.js](https://nodejs.org/) (v18 or newer) installed.
 
 ```bash
-# 2. Move to Correct Directory
+# 1. Move to Correct Directory
 cd To-Do-List
 
 # 2. Install dependencies
