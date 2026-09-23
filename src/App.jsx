@@ -23,8 +23,8 @@ function App() {
     return saved ? JSON.parse(saved) : DEFAULT_TODOS
   })
 
-  // Which tasks to show: 'all' | 'active' | 'done'
-  const [filter, setFilter] = useState('all')
+  // Which tasks to show: 'active' | 'done'
+  const [filter, setFilter] = useState('active')
 
   // Whenever the todos change, save them to the browser.
   useEffect(() => {
@@ -57,11 +57,24 @@ function App() {
     setTodos(todos.filter((todo) => !todo.done))
   }
 
+  // Move the dragged task (dragId) to the position of the task it's
+  // hovering over (hoverId), so the list reorders as you drag.
+  function moveTodo(dragId, hoverId) {
+    setTodos((prev) => {
+      const items = [...prev]
+      const from = items.findIndex((todo) => todo.id === dragId)
+      const to = items.findIndex((todo) => todo.id === hoverId)
+      if (from === -1 || to === -1 || from === to) return prev
+      const [moved] = items.splice(from, 1) // remove the dragged task
+      items.splice(to, 0, moved) // insert it at the new spot
+      return items
+    })
+  }
+
   // ---- Derived values ----
   const visibleTodos = todos.filter((todo) => {
-    if (filter === 'active') return !todo.done
     if (filter === 'done') return todo.done
-    return true // 'all'
+    return !todo.done // 'active'
   })
 
   const activeCount = todos.filter((todo) => !todo.done).length
@@ -69,10 +82,10 @@ function App() {
   return (
     <div className="app">
       <header className="app__header">
-        <h1>✓ My To-Do List</h1>
+        <h1>My To-Do List</h1>
         <p className="app__subtitle">
           {activeCount === 0
-            ? 'All done — nice work! 🎉'
+            ? 'All done nice work!'
             : `${activeCount} task${activeCount === 1 ? '' : 's'} left to do`}
         </p>
       </header>
@@ -90,6 +103,7 @@ function App() {
         todos={visibleTodos}
         onToggle={toggleTodo}
         onDelete={deleteTodo}
+        onReorder={moveTodo}
       />
     </div>
   )

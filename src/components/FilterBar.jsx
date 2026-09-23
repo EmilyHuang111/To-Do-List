@@ -1,7 +1,6 @@
 // Buttons to filter which tasks are shown, plus a "clear completed" button.
 // All the data and callbacks come in through props.
 const FILTERS = [
-  { key: 'all', label: 'All' },
   { key: 'active', label: 'Active' },
   { key: 'done', label: 'Done' },
 ]

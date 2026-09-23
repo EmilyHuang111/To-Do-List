@@ -16,13 +16,13 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding: 3rem 1rem;
-  background: linear-gradient(160deg, #eef1ff 0%, #f7f0ff 100%);
+  background: linear-gradient(160deg, #e8f0ff 0%, #f0f6ff 100%);
   color: #1f2333;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: linear-gradient(160deg, #1a1c2e 0%, #241b33 100%);
+    background: linear-gradient(160deg, #0f172a 0%, #14213d 100%);
     color: #eceef5;
   }
 }

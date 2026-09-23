@@ -5,7 +5,7 @@
   backdrop-filter: blur(8px);
   border-radius: 18px;
   padding: 1.75rem;
-  box-shadow: 0 20px 50px rgba(60, 50, 120, 0.18);
+  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.18);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,7 +24,7 @@
 .app__header h1 {
   margin: 0;
   font-size: 1.9rem;
-  color: #6c5ce7;
+  color: #2563eb;
 }
 
 .app__subtitle {
@@ -44,7 +44,7 @@
   flex: 1;
   padding: 0.7rem 0.9rem;
   font-size: 1rem;
-  border: 2px solid #dcdff0;
+  border: 2px solid #d3e0f5;
   border-radius: 10px;
   background: #fff;
   color: #1f2333;
@@ -53,7 +53,7 @@
 
 .add-todo__input:focus {
   outline: none;
-  border-color: #6c5ce7;
+  border-color: #2563eb;
 }
 
 .add-todo__button {
@@ -61,7 +61,7 @@
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  background: #6c5ce7;
+  background: #2563eb;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -69,7 +69,7 @@
 }
 
 .add-todo__button:hover {
-  background: #5a4bd4;
+  background: #1d4ed8;
 }
 
 .add-todo__button:active {
@@ -88,7 +88,7 @@
 
 .filter-bar__group {
   display: inline-flex;
-  background: #ecebfb;
+  background: #e4edfb;
   border-radius: 999px;
   padding: 0.2rem;
 }
@@ -100,11 +100,11 @@
   font-size: 0.9rem;
   border-radius: 999px;
   cursor: pointer;
-  color: #514a7a;
+  color: #33507d;
 }
 
 .filter-bar__button--active {
-  background: #6c5ce7;
+  background: #2563eb;
   color: #fff;
   font-weight: 600;
 }
@@ -147,8 +147,34 @@
   gap: 0.5rem;
   padding: 0.65rem 0.85rem;
   background: #fff;
-  border: 2px solid #eef0fb;
+  border: 2px solid #e6eefb;
   border-radius: 12px;
+  cursor: grab;
+}
+
+.todo-item:active {
+  cursor: grabbing;
+}
+
+.todo-item--dragging {
+  opacity: 0.5;
+  border-color: #2563eb;
+}
+
+/* Little grip icon that hints the row can be dragged. */
+.todo-item__handle {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex-shrink: 0;
+  padding-right: 0.15rem;
+}
+
+.todo-item__handle span {
+  width: 14px;
+  height: 2px;
+  border-radius: 2px;
+  background: #c2cfe6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -180,7 +206,7 @@
 .todo-item__label input[type='checkbox'] {
   width: 1.15rem;
   height: 1.15rem;
-  accent-color: #6c5ce7;
+  accent-color: #2563eb;
   cursor: pointer;
   flex-shrink: 0;
 }
