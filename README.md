@@ -22,10 +22,13 @@ This app lets you manage a personal task list:
 You'll need [Node.js](https://nodejs.org/) (v18 or newer) installed.
 
 ```bash
-# 1. Install dependencies
+# 2. Move to Correct Directory
+cd into the To-Do-List directory 
+
+# 2. Install dependencies
 npm install
 
-# 2. Start the development server
+# 3. Start the development server
 npm run dev
 ```
 
