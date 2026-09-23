@@ -23,7 +23,7 @@ You'll need [Node.js](https://nodejs.org/) (v18 or newer) installed.
 
 ```bash
 # 2. Move to Correct Directory
-cd into the To-Do-List directory 
+cd To-Do-List
 
 # 2. Install dependencies
 npm install
