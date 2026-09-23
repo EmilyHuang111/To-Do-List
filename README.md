@@ -1,4 +1,4 @@
-# ✓ My To-Do List
+# My To-Do List
 
 A small, single-page to-do list built with **React** (using Vite). You can add
 tasks, mark them complete, delete them, and filter the list. Your tasks are
