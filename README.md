@@ -35,8 +35,6 @@ npm run dev
 Then open the URL Vite prints in your terminal (usually
 **http://localhost:5173**).
 
-To build a production version, run `npm run build` and preview it with
-`npm run preview`.
 
 ## My contribution
 
