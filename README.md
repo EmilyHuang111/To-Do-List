@@ -44,7 +44,7 @@ I built this page from scratch. The main pieces I wrote:
   - `App` — holds the state (the task list + current filter) and the functions
     that change it.
   - `AddTodo` — the input form; calls `onAdd` when you submit.
-  - `FilterBar` — the All / Active / Done buttons and *Clear completed*.
+  - `FilterBar` — the Active / Done buttons and *Clear completed*.
   - `TodoList` — maps over the tasks and shows an empty-state message.
   - `TodoItem` — a single task row (checkbox, text, delete button).
 - **State and interactions.** `App` uses `useState` for the todos and the
