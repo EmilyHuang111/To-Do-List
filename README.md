@@ -66,8 +66,8 @@ flipping just one field. That made toggling and deleting predictable, and it's
 why the `key={todo.id}` on each list item matters for React to track rows.
 
 I also learned how `useEffect` works by using it to sync the list to
-`localStorage` every time the tasks change, which is what makes the list survive
-a refresh.
+`localStorage` every time the tasks change, which is what keeps the list after a refresh.
+
 
 ## References
 
@@ -75,4 +75,4 @@ a refresh.
   props, `useState`, `useEffect`).
 - [Vite — Getting Started](https://vite.dev/guide/) for the project setup and
   dev server.
-- Full Stack at Brown bootcamp materials, for the core React techniques.
+- Full Stack at Brown bootcamp materials
